@@ -1,9 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Calibri, Arial, sans-serif;
-}
+// Imports do CSS
+@import 'variables/variables';
+@import 'reset/reset';
+@import 'base/base';
+@import 'header/header';
+// @import 'main/mainHome';
+// @import 'main/mainCategoria';
+// @import 'main/mainProduto';
+@import 'footer/footer';

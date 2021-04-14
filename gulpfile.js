@@ -8,7 +8,7 @@ const gulp =  require("gulp"),
               reload = browserSync.reload;
 
 function html() {
-  return gulp.src("./src/*.html").pipe(gulp.dest("./dist"));
+  return gulp.src("./src/**/*.html").pipe(gulp.dest("./dist"));
 }
 
 function images() {
@@ -22,50 +22,48 @@ function js() {
 }
 
 function style() {
-  
-  return (
-    gulp
-      .src([
-        // setup
-        // './src/styles/**/*.scss',
-        "./src/styles/styles.scss",
-      ])
-      .pipe(
-        sassLint({
-          rules: {
-            "no-extends": 1,
-            "no-color-keywords": 2,
-            "class-name-format": [
-              1,
-              {
-                convention: "hyphenatedbem",
-              },
-            ],
-            indentation: [
-              1,
-              {
-                character: "space",
-                size: 4,
-              },
-            ],
-          },
-        })
-      )
+  return gulp
+    .src([
+      // setup
+      // './src/styles/**/*.scss',
+      `./src/styles/styles.scss`,
+    ])
 
-      .pipe(concat("styles.scss"))
+    .pipe(
+      sassLint({
+        rules: {
+          "no-extends": 1,
+          "no-color-keywords": 2,
+          "class-name-format": [
+            1,
+            {
+              convention: "hyphenatedbem",
+            },
+          ],
+          indentation: [
+            1,
+            {
+              character: "space",
+              size: 4,
+            },
+          ],
+        },
+      })
+    )
 
-      .pipe(sassLint.format())
+    .pipe(concat(`styles.scss`))
 
-      .pipe(sourcemaps.init())
+    .pipe(sassLint.format())
 
-      .pipe(sass().on("error", sass.logError))
+    .pipe(sourcemaps.init())
 
-      .pipe(autoprefixer("last 2 versions"))
+    .pipe(sass().on("error", sass.logError))
 
-      .pipe(gulp.dest("./dist/styles/"))
+    .pipe(autoprefixer("last 2 versions"))
 
-      .pipe(browserSync.stream())
-  );
+    .pipe(gulp.dest("./dist/styles/"))
+
+    .pipe(browserSync.stream());
 }
 
 function watch() {
