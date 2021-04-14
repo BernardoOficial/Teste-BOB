@@ -1,0 +1,44 @@
+.banner {
+    @include container;
+    height: 676px;
+    
+
+    .banner__image {
+        height: 100%;
+        background: url(../../images/main/banner.jpg) no-repeat;
+        background-size: 1600px 676px;
+        background-position: center;
+        
+        @include flex($alignItems: center);
+
+        .banner__overlay {
+            @include wrapper;
+            position: relative;
+            top: auto;
+            bottom: auto;
+
+
+            .banner__title {
+                @include fontMontserrat($weight: 600);
+                font-size: 3.75rem;
+                line-height: 4.5rem;
+                text-transform: uppercase;
+                color: var(--black-primary);
+                margin-bottom: 1.875rem;
+                max-width: 400px;
+            }
+
+            .banner__paragraph {
+                @include fontMontserrat;
+                font-size: 1.375rem;
+                line-height: 2.25rem;
+                color: var(--black-third);
+            }
+
+            .banner__link {
+                @include buttonDefault;
+                margin-top: 5.95rem;
+            }
+        }
+    }
+}

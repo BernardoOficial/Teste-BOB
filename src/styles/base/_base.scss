@@ -319,9 +319,11 @@
     @include fontMontserrat($weight: 700);
     font-size: 0.875rem;
     line-height: 1.5rem;
+    color: var(--white-primary);
+    text-transform: uppercase;
     text-align: center;
     background-color: var(--black-primary);
-    padding: 1.31rem 1.875rem;
+    padding: 1.31rem 3.75rem;
     box-shadow: inset 0 0 0 5px var(--black-primary),
                 inset 0 0 0 6px var(--white-primary);
 }

@@ -1,0 +1,36 @@
+@if breadcrumbs {
+
+}
+
+.breadcrumbs-extend {
+    @include container($bg-color: var(--black-primary));
+    height: 300px;
+    // height: 140px;
+}
+
+.breadcrumbs-reduced {
+    @include container($bg-color: var(--black-primary));
+    height: 140px;
+}
+
+.breadcrumbs__content {
+    @include flex($flexDirection: column);
+    height: 100%;
+
+    .breadcrumbs__title-page {
+        @include fontMontserrat($weight: 600);
+        font-size: 1.875rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: var(--white-primary);
+        margin-bottom: 1.375rem;
+        max-width: 400px;
+    }
+    
+    .breadcrumbs__paragraph {
+        @include fontMontserrat;
+        font-size: 0.875rem;
+        line-height: 1.875rem;
+        color: var(--white-primary);
+    }
+}
