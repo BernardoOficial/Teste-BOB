@@ -1,6 +1,6 @@
 .#{$footer} {
     @include container($bg-color: var(--white-secondary));
-
+    margin-top: 6.25rem;
     .#{$footer}__wrapper {
 
         @include wrapper;

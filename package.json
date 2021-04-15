@@ -12,7 +12,8 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass-lint": "^1.4.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "json-server": "^0.16.3"
   },
   "devDependencies": {
     "browser-sync": "^2.26.14",

@@ -101,7 +101,7 @@
         text-align: center;
         & > a {
             @include buttonDefault;
-            margin: 4.375rem auto 6.25rem;
+            margin: 4.375rem auto 0;
         }
     }
 
