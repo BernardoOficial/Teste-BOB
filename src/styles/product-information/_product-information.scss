@@ -1,0 +1,11 @@
+.main__product-information {
+    @include wrapper;
+    @include grid(
+        $gridTemplateColumn: 1fr 1fr,
+        $row-gap: 0rem,
+        $column-gap: 5.31rem,
+        $alignItems: start
+    );
+    margin-top: 3.125rem;
+
+}

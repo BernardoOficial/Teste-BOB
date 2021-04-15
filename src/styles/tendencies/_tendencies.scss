@@ -1,0 +1,101 @@
+.main__tendencies {
+    @include wrapper;
+    margin-top: 3.875rem;
+
+    .main__tendencies-title {
+        @include fontMontserrat($weight: 700);
+        font-size: 1.875rem;
+        line-height: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--black-primary);
+        margin-bottom: 2.675rem;
+    }
+
+    .main__tendencies-content {
+        @include grid(
+            $gridTemplateColumn: 540px 540px,
+            $gridTemplateRows: 345px 345px,
+            $column-gap: 1.875rem,
+            $row-gap: 1.875rem
+        );
+
+        @media (max-width: $break-point-tablet-portrait) {
+            @include grid(
+                $gridTemplateColumn: 400px 400px,
+                $gridTemplateRows: 245px 245px,
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+        
+        @media (max-width: $break-point-mobile-landscape) {
+            @include grid(
+                $gridTemplateColumn: 540px,
+                $gridTemplateRows: 345px 345px 345px,
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+        
+        @media (max-width: $break-point-mobile-portrait) {
+            @include grid(
+                $gridTemplateColumn: 100%,
+                $gridTemplateRows: 345px 345px 345px,
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+
+        .main__tendencies-categories {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            .wrapper {
+                padding: 3.125rem 1rem 1rem 3.125rem;
+
+                .main__tendencies-category {
+                    @include fontMontserrat;
+                    font-size: 0.875rem;
+                    line-height: 1rem;
+                    text-transform: uppercase;
+                    color: var(--black-primary);
+                    margin-bottom: 0.8rem;
+                }
+
+                .main__tendencies-link {
+                    @include fontMontserrat($weight: 600);
+                    font-size: 0.875rem;
+                    line-height: 1rem;
+                    color: var(--black-third);
+
+                    &:hover {
+                        filter: brightness(80%);
+                    }
+                }   
+            }
+        }
+
+        .men-dresses {
+            background-image: url(../../images/main/tendencies-1.jpg);
+        }
+
+        .women-dresses {
+            height: 100%;
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            background-image: url(../../images/main/tendencies-2.jpg);
+
+            @media (max-width: $break-point-mobile) {
+                grid-column: initial;
+                grid-row: initial;
+            }
+        }
+
+        .jewellery {
+            background-image: url(../../images/main/tendencies-3.jpg);
+        }
+    }
+}

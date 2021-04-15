@@ -1,25 +1,37 @@
 // MENU MOBILE
-const iconMenu = document.querySelector("[data-icon]");
+const body = document.body; 
+const iconMenuOpen = document.querySelector("[data-icon]");
 const overlay = document.querySelector("[data-overlay]");
 const menuMobile = document.querySelector("[data-menu-mobile]");
+const iconMenuClose = document.querySelector("[data-icon-close]");
 
 const toggleIcon = () => {
-  iconMenu.classList.add("header__icon-toggle--ativo");
+  iconMenuOpen.classList.add("header__icon-toggle--ativo");
   overlay.classList.add("header__overlay--ativo");
   menuMobile.classList.add("header__menu-mobile--ativo");
+
+  body.setAttribute('data-noscroll', '');
 };
 
 const hideOverlay = (evento) => {
   evento.stopPropagation();
-  iconMenu.classList.remove("header__icon-toggle--ativo");
+  iconMenuOpen.classList.remove("header__icon-toggle--ativo");
   overlay.classList.remove("header__overlay--ativo");
   menuMobile.classList.remove("header__menu-mobile--ativo");
+
+  body.removeAttribute("data-noscroll");
 };
 
 menuMobile.addEventListener("click", (evento) => evento.stopPropagation());
 
-iconMenu.addEventListener("click", toggleIcon);
+// Abrir Menu
+iconMenuOpen.addEventListener("click", toggleIcon);
+
+// Fechar Menu
 overlay.addEventListener("click", hideOverlay);
+iconMenuClose.addEventListener("click", hideOverlay);
+
+console.log("Apareci");
 
 //////////////////////////////////////////////
 

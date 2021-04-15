@@ -1,0 +1,25 @@
+.main__pagination {
+    @include flex;
+    margin: 6.25rem 0;
+
+    .main__button {
+        width: 34px;
+        height: 34px;
+        margin: 0 0.5rem;
+        cursor: pointer;
+
+        @include fontMontserrat($weight: bold);
+        font-size: 0.93rem;
+        line-height: 1.125rem;
+        color: var(--black-third);
+
+        &--ativo {
+            color: var(--white-primary);
+            background-color: var(--black-primary);
+        }
+
+        &--next {
+            border: 1px solid var(--black-third);
+        }
+    }
+}

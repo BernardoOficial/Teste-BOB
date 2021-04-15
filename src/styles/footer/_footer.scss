@@ -25,7 +25,7 @@
 
             @media (max-width: $break-point-tablet-portrait) {
                 @include grid(
-                    $gridTemplateColumn: auto auto,
+                    $gridTemplateColumn: 1fr 1fr,
                     $gridTemplateRows: auto auto,
                     $column-gap: 10rem,
                     $row-gap: 2rem,
@@ -36,7 +36,7 @@
             
             @media (max-width: $break-point-mobile) {
                 @include grid(
-                    $gridTemplateColumn: auto,
+                    $gridTemplateColumn: 1fr,
                     $gridTemplateRows: auto auto auto,
                     $column-gap: 0,
                     $row-gap: 2rem,

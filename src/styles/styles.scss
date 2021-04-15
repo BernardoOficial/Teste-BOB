@@ -3,9 +3,13 @@
 @import 'reset/reset';
 @import 'base/base';
 @import 'header/header';
+@import 'footer/footer';
+@import 'main/main';
+
+// Components
 @import 'banner/banner';
 @import 'breadcrumbs/breadcrumbs';
-// @import 'main/mainHome';
-// @import 'main/mainCategoria';
-// @import 'main/mainProduto';
-@import 'footer/footer';
+@import 'tendencies/tendencies';
+@import 'product-list/product-list';
+@import 'pagination/pagination';
+@import 'product-information/product-information';

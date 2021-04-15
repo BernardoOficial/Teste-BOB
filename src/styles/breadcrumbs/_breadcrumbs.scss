@@ -1,7 +1,3 @@
-@if breadcrumbs {
-
-}
-
 .breadcrumbs-extend {
     @include container($bg-color: var(--black-primary));
     height: 300px;

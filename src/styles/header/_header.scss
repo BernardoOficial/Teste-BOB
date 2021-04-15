@@ -4,7 +4,7 @@
     .#{$header}__more-information {
         display: none;
         background-color: var(--black-primary);
-        padding: 0.5rem 1.875rem;
+        padding: 0.2rem 1.875rem;
 
         .#{$header}__icon-toggle {
     
@@ -113,9 +113,10 @@
                     width: 30px;
                     padding: 5px;
                     margin-bottom: 2rem;
+                    cursor: pointer;
                 }
 
-                .#{$header}__item {
+                & > .#{$header}__item {
 
                     @include menuItem($margin-itens: 0);
 
@@ -126,7 +127,7 @@
                     }
                 }
 
-                .#{$footer}__list-social-media {
+                .#{$header}__list-social-media {
                     @include flex;
                     width: calc(100% - 3.750rem);
                     position: absolute;
@@ -134,12 +135,12 @@
                     right: 1.875rem;
                     bottom: 1.875rem;
 
-                    .#{$footer}__item {
+                    .#{$header}__item {
                         @include menuItem($margin-itens: 1.5rem);
 
-                        .#{$footer}__link {
-                            font-size: 0.875rem;
-                            color: var(--black-primary);
+                        .#{$header}__link {
+
+                            @include menuLink($isDecoration: false);
                         }
                     }
                 }

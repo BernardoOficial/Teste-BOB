@@ -34,6 +34,7 @@ html[data-theme='light'] {
     --black-third: #777777;
     --black-fourth: #999999;
     --red-primary: #F90000;
+    --shadow-black: #33333333;
 }   
 
 html[data-theme='dark'] {
@@ -45,6 +46,7 @@ html[data-theme='dark'] {
     --black-third: #777777;
     --black-fourth: #999999;
     --red-primary: #F90000;
+    --shadow-black: #33333333;
 }   
 
 a {
@@ -77,4 +79,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
+}
+
+body[data-noscroll=""] {
+    overflow-y: hidden;
 }
