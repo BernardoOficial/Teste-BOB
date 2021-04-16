@@ -1,19 +1,21 @@
 // MENU MOBILE
-const body = document.body; 
+const body = document.body;
 const iconMenuOpen = document.querySelector("[data-icon]");
 const overlay = document.querySelector("[data-overlay]");
 const menuMobile = document.querySelector("[data-menu-mobile]");
 const iconMenuClose = document.querySelector("[data-icon-close]");
 
 const toggleIcon = () => {
+
   iconMenuOpen.classList.add("header__icon-toggle--ativo");
   overlay.classList.add("header__overlay--ativo");
   menuMobile.classList.add("header__menu-mobile--ativo");
 
-  body.setAttribute('data-noscroll', '');
+  body.setAttribute("data-noscroll", "");
 };
 
 const hideOverlay = (evento) => {
+    
   evento.stopPropagation();
   iconMenuOpen.classList.remove("header__icon-toggle--ativo");
   overlay.classList.remove("header__overlay--ativo");
@@ -31,28 +33,31 @@ iconMenuOpen.addEventListener("click", toggleIcon);
 overlay.addEventListener("click", hideOverlay);
 iconMenuClose.addEventListener("click", hideOverlay);
 
-console.log("Apareci");
 
-//////////////////////////////////////////////
+
+////////////////////////////////////////////
 
 // LAZYLOAD
-// window.onload = verificarScroll;
+window.onload = verificarScroll;
 
-// function verificarScroll() {
-//   window.addEventListener("scroll", aparecerImages);
-// }
+function verificarScroll() {
+  window.addEventListener("scroll", aparecerImages);
+}
 
-// function aparecerImages() {
-//   const containersElements = document.querySelectorAll(".main__show-me");
+function aparecerImages() {
+  const containersElements = document.querySelectorAll(".main__show-me");
 
-//   containersElements.forEach((element) => {
-//     if (element.getBoundingClientRect().top < window.innerHeight - 300) {
-//       element.classList.add("main__show-me--ativo");
-//     } else if (element.getBoundingClientRect().top > window.innerHeight - 150) {
-//       element.classList.remove("main__show-me--ativo");
-//     }
-//   });
-// }
+  containersElements.forEach((element) => {
+
+    if (element.getBoundingClientRect().top < window.innerHeight - 300) {
+
+      element.classList.add("main__show-me--ativo");
+    } else if (element.getBoundingClientRect().top > window.innerHeight - 150) {
+
+      element.classList.remove("main__show-me--ativo");
+    }
+  });
+}
 
 //////////////////////////////////////////////
 
@@ -78,39 +83,3 @@ console.log("Apareci");
 // };
 
 // btnTheme.addEventListener("click", switchTheme);
-
-//////////////////////////////////////////////
-
-// ACCORDION
-const accordions = Array.from(document.querySelectorAll(".main__accordion-item"));
-
-accordions.forEach(accordion => {
-
-  let isActive = false;
-  const accordionTitle = accordion.querySelector('.main__title');
-  
-  accordionTitle.addEventListener('click', handleClick)
-
-  function handleClick(evento) {
-    evento.stopPropagation();
-
-    isActive = !isActive;
-
-    accordionTitle.classList.toggle("main__title--active");
-    
-    const currentTitleHeight = accordionTitle.offsetHeight;
-    const currentParagraphHeight = accordionTitle.nextElementSibling.offsetHeight;
-
-    isActive
-      ? (accordion.style.height = `${
-          Number(currentTitleHeight) + Number(currentParagraphHeight)
-        }px`)
-      : (accordion.style.height = `${currentTitleHeight}px`);
-
-  }
-})
-
-// Produtos
-fetch("http://localhost:3002/products")
-  .then(response => response.json())
-  .then(products => console.log(products))

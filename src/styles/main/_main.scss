@@ -1,3 +1,39 @@
 .#{$main} {
     @include container;
+
+    .#{$main}__show-me {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15px);
+        animation: hideElement 0.6s ease-out forwards;
+
+         @keyframes hideElement {
+            0% {
+                transform: translateY(0px);
+                visibility: visible;
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-15px);
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+        &--ativo {
+            animation: show-me 1s ease-out forwards;
+            @keyframes show-me {
+                0% {
+                    transform: translateY(-15px);
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    } 
 }

@@ -698,6 +698,64 @@ body[data-noscroll=""] {
 .main {
   width: 100%;
   max-width: 100%; }
+  .main .main__show-me {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    -webkit-animation: hideElement 0.6s ease-out forwards;
+            animation: hideElement 0.6s ease-out forwards; }
+
+@-webkit-keyframes hideElement {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    visibility: hidden;
+    opacity: 0; } }
+
+@keyframes hideElement {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    visibility: visible;
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    visibility: hidden;
+    opacity: 0; } }
+    .main .main__show-me--ativo {
+      -webkit-animation: show-me 1s ease-out forwards;
+              animation: show-me 1s ease-out forwards; }
+
+@-webkit-keyframes show-me {
+  0% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    visibility: visible;
+    opacity: 1; } }
+
+@keyframes show-me {
+  0% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    visibility: visible;
+    opacity: 1; } }
 
 .banner {
   width: 100%;

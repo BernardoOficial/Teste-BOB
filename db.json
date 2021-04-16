@@ -4,49 +4,73 @@
         "id": 1,
         "name": "Creative Adidas T-Shirts",
         "price": 150.55,
-        "image": "./images/main/roupa-1.jpg"
+        "image": "/images/main/roupa-1.jpg"
     },
     {
         "id": 2,
         "name": "Mango-Navy",
         "price": 190.99,
-        "image": "./images/main/roupa-2.jpg"
+        "image": "/images/main/roupa-2.jpg"
     },
     {
         "id": 3,
         "name": "Gravida Est Quis Euismod",
         "price": 150.55,
-        "image": "./images/main/roupa-3.jpg"
+        "image": "/images/main/roupa-3.jpg"
     },
     {
         "id": 4,
         "name": "Donec Condimentum Fer",
         "price": 150.55,
-        "image": "./images/main/roupa-4.jpg"
+        "image": "/images/main/roupa-4.jpg"
     },
     {
         "id": 5,
         "name": "Creative Adidas T-Shirts",
         "price": 150.55,
-        "image": "./images/main/roupa-5.jpg"
+        "image": "/images/main/roupa-5.jpg"
     },
     {
         "id": 6,
         "name": "Mango-Navy",
         "price": 150.55,
-        "image": "./images/main/roupa-6.jpg"
+        "image": "/images/main/roupa-6.jpg"
     },
     {
         "id": 7,
         "name": "Creative Adidas T-Shirts",
         "price": 150.55,
-        "image": "./images/main/roupa-7.jpg"
+        "image": "/images/main/roupa-7.jpg"
     },
     {
         "id": 8,
         "name": "Creative Adidas T-Shirts",
         "price": 150.55,
-        "image": "./images/main/roupa-8.jpg"
+        "image": "/images/main/roupa-8.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Creative Adidas T-Shirts",
+        "price": 150.55,
+        "image": "/images/main/roupa-1.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Mango-Navy",
+        "price": 190.99,
+        "image": "/images/main/roupa-2.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Gravida Est Quis Euismod",
+        "price": 150.55,
+        "image": "/images/main/roupa-3.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Donec Condimentum Fer",
+        "price": 150.55,
+        "image": "/images/main/roupa-4.jpg"
     }
   ]
 }
