@@ -26,7 +26,6 @@ function salveProducts(newProducts) {
 
 async function getProducts(limitItems = false, isFilter = false) {
   let response;
-  // id=1&id=2
 
   if(isFilter) {
     response = await fetch(`http://localhost:3002/products?${isFilter}`)
@@ -37,12 +36,6 @@ async function getProducts(limitItems = false, isFilter = false) {
   else {
     response = await fetch("http://localhost:3002/products");
   }
-
-  // limitItems
-  //   ? (response = await fetch(
-  //       `http://localhost:3002/products?_limit=${limitItems}`
-  //     ))
-  //   : (response = await fetch("http://localhost:3002/products"));
 
   if (!response.ok) {
     throw new Error("Erro ao buscar os dados: requisição falhou.");

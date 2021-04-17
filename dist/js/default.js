@@ -58,28 +58,3 @@ function aparecerImages() {
     }
   });
 }
-
-//////////////////////////////////////////////
-
-// SWITCH THEME
-// const HTML = document.querySelector("html");
-// const btnTheme = document.querySelector("[data-btn-theme]");
-// const iconBtnTheme = btnTheme.firstElementChild;
-
-// const classNamesIcons = {
-//   sun: "fas fa-sun",
-//   moon: "fas fa-moon",
-// };
-
-// const getCurrentTheme = () => HTML.getAttribute("data-theme");
-
-// const switchTheme = () => {
-//   const currentTheme = getCurrentTheme();
-//   currentTheme === "light"
-//     ? (HTML.setAttribute("data-theme", "dark"),
-//       (iconBtnTheme.classList.value = classNamesIcons.sun))
-//     : (HTML.setAttribute("data-theme", "light"),
-//       (iconBtnTheme.classList.value = classNamesIcons.moon));
-// };
-
-// btnTheme.addEventListener("click", switchTheme);

@@ -19,7 +19,7 @@ html {
         line-height: 1.2rem;
     }
     @media (max-width: $break-point-mobile) {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1rem;
     }
 
@@ -42,6 +42,7 @@ html[data-theme='dark'] {
     --white-primary: #ffffff;
     --white-secondary: #FAFAFA;
     --white-third: #E7E7E7;
+    --white-fourth: #EFEFEF;
     --black-primary: #333333;
     --black-secondary: #000000;
     --black-third: #777777;
