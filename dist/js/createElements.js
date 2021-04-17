@@ -6,12 +6,13 @@ function createProducts(products) {
 
         template += `
             <article class="main__product main__show-me" data-product="${product.id}">
-                <a href="#" title="Visualizar product">
+                <a href="/pages/produto.html" title="Visualizar produto">
                     <img class="main__product-image" loading="lazy" src="${product.image}" alt="${product.name}" title="${product.name}">
-                    <h4 class="main__product-name">${product.name}</h4>
-                    <p class="main-product-price">R$ ${product.price}</p>
-                    <i class="far fa-heart main-product-icon"></i>
                 </a>
+                <h4 class="main__product-name">${product.name}</h4>
+                <p class="main-product-price">R$ ${product.price}</p>
+                <i class="fas fa-heart main-product-icon" onclick="bag(event)"></i>
+                <i class="far fa-heart main-product-icon" onclick="bag(event)"></i>
             </article>
         `;
     })

@@ -74,8 +74,12 @@
 
                 <section class="header__store-cart">
                     <h4>
+                        <a href="/pages/favoritos.html">
+                            <i class="fas fa-heart main-product-icon"></i>
+                        </a>
                         <i class="fas fa-shopping-bag"></i>
-                        (0) - <span class="header__store-cart-price">R$ 0.00</span>
+                        (<span class="header__store-cart-quantity">0</span>) - 
+                        <span class="header__store-cart-price">R$ 0.00</span>
                     </h4>
                 </section>
 
@@ -268,16 +272,16 @@
                     <section class="main__buy-product">
 
                         <div class="main__quantity-products">
-                            <button>
+                            <button type="button" data-less-1>
                                 <i class='bx bx-minus'></i>
                             </button>
-                            <span class="main__current-quantity">01</span>
-                            <button>
+                            <span class="main__current-quantity" data-current-quantity>01</span>
+                            <button type="button" data-more-1>
                                 <i class='bx bx-plus'></i>
                             </button>
                         </div>
 
-                        <a href="#" class="main__buy" title="Comprar produto">
+                        <a href="/pages/favoritos.html" class="main__buy" title="Comprar produto">
                             Comprar
                         </a>
 
@@ -431,6 +435,8 @@
     <script src="../js/createElements.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/accordion.js"></script>
+    <script src="../js/quantity.js"></script>
+    <script src="../js/store.js"></script>
 
     <script>
         startProductListing(4);

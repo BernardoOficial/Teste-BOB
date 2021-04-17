@@ -35,6 +35,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cantata+One&display=swap" rel="stylesheet">
 
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="./lib/OwlCarousel2/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./lib/OwlCarousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./lib/OwlCarousel2/dist/assets/owl.theme.default.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
 
@@ -71,8 +76,12 @@
 
                 <section class="header__store-cart">
                     <h4>
+                        <a href="/pages/favoritos.html">
+                            <i class="fas fa-heart main-product-icon"></i>
+                        </a>
                         <i class="fas fa-shopping-bag"></i>
-                        (0) - <span class="header__store-cart-price">R$ 0.00</span>
+                        (<span class="header__store-cart-quantity">0</span>) - 
+                        <span class="header__store-cart-price">R$ 0.00</span>
                     </h4>
                 </section>
 
@@ -169,17 +178,23 @@
 
         <article class="banner">
             
-            <section class="banner__image">
+            <section class="banner__carousel-content owl-carousel owl-theme">
 
-                <div class="banner__overlay">
+                <div class="item">
 
-                    <h2 class="banner__title">Summer Collection</h2>
-                    
-                    <p class="banner__paragraph">Separamos os melhores looks para você neste 2019</p>
+                    <img class="banner__image" src="./images/banner/banner.jpg" title="Summer Collection" alt="Summer Collection">
 
-                    <a class="banner__link" href="#" type="button" title="SHOP NOW">
-                        Shop Now
-                    </a>
+                    <div class="banner__overlay">
+    
+                        <h2 class="banner__title">Summer Collection</h2>
+                        
+                        <p class="banner__paragraph">Separamos os melhores looks para você neste 2019</p>
+    
+                        <a class="banner__link" href="#" type="button" title="SHOP NOW">
+                            Shop Now
+                        </a>
+    
+                    </div>
 
                 </div>
 
@@ -230,7 +245,7 @@
 
                 <div class="main__product-list-link">
 
-                    <a href="#" type="button" title="VER MAIS PRODUTOS">
+                    <a href="/pages/categoria.html" type="button" title="VER MAIS PRODUTOS">
                         Ver mais produtos
                     </a>
 
@@ -336,9 +351,15 @@
 
         </footer>
 
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/OwlCarousel2/dist/owl.carousel.min.js"></script>
+
+    <script src="./js/carousel.js"></script>
+    
     <script src="./js/default.js"></script>
     <script src="./js/createElements.js"></script>
     <script src="./js/products.js"></script>
+    <script src="../js/store.js"></script>
 
     <script>
         startProductListing(8);

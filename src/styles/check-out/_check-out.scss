@@ -1,0 +1,111 @@
+.main__favorite-products {
+    @include wrapper;
+    margin-top: 3rem;
+
+    .main__favorite-products-title {
+        @include fontMontserrat($weight: bold);
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    .main__list-favorite {
+        @include grid(
+            $gridTemplateColumn: repeat(4, 255px),
+            $column-gap: 1.875rem,
+            $row-gap: 4.375rem
+        );
+
+        @media (max-width: $break-point-tablet-portrait) {
+            @include grid(
+                $gridTemplateColumn: repeat(4, 180px),
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+
+        @media (max-width: $break-point-mobile-landscape) {
+            @include grid(
+                $gridTemplateColumn: repeat(3, 180px),
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+        
+        @media (max-width: $break-point-mobile-portrait) {
+            @include grid(
+                $gridTemplateColumn: repeat(2, 180px),
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+        
+        @media (max-width: $break-point-mobile-portrait-reduced) {
+            @include grid(
+                $gridTemplateColumn: 250px,
+                $column-gap: 1.875rem,
+                $row-gap: 1.875rem,
+            );
+        }
+
+        .main__product {
+            box-shadow: 0 2px 7px 1px var(--shadow-black);
+            transition: transform 0.3s linear;
+            position: relative;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            .main__product-image {
+                width: 100%;
+            }
+
+            .main__product-name {
+                @include fontMontserrat;
+                font-size: 0.875rem;
+                line-height: 2rem;
+                color: var(--black-third);
+                margin: 0.5rem 0 0 1.2rem;
+
+                &:hover {
+                    filter: brightness(80%);
+                }
+            }
+
+            .main-product-price {
+                @include fontMontserrat($weight: bold);
+                font-size: 0.875rem;
+                line-height: 1.2rem;
+                text-transform: uppercase;
+                color: var(--black-primary);
+                margin: 0 0 1rem 1.2rem;
+            }
+
+            .main-product-icon {
+                position: absolute;
+                bottom: 0.7rem;
+                right: 0.5rem;
+                padding: 5px;
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            .fas.fa-heart {
+                display: none;
+            }
+
+            .far.fa-heart {
+                display: block;
+            }
+            
+            &.item-bag .fas.fa-heart {
+                display: block;
+            }
+
+            &.item-bag .far.fa-heart {
+                display: none;
+            }
+
+        }
+    }
+}

@@ -94,6 +94,22 @@
                 cursor: pointer;
             }
 
+            .fas.fa-heart {
+                display: none;
+            }
+
+            .far.fa-heart {
+                display: block;
+            }
+            
+            &.item-bag .fas.fa-heart {
+                display: block;
+            }
+
+            &.item-bag .far.fa-heart {
+                display: none;
+            }
+
         }
     }
 

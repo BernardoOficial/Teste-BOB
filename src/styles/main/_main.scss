@@ -36,4 +36,51 @@
             }
         }
     } 
+
+    .popup-mensagem {
+        position: fixed;
+        bottom: 2.5rem;
+
+        padding: 1rem 1.4rem;
+        background-color: var(--black-primary);
+        
+        @include fontMontserrat($weight: 600);
+        font-size: 1rem;
+        line-height: 1.2rem;
+        color: var(--white-primary);
+
+        transform: translateX(0vw);
+        visibility: hidden;
+        animation: hidePopup 0.6s ease-out forwards;
+        
+        @keyframes hidePopup {
+            0% {
+                transform: translateX(0px);
+                visibility: visible;
+            }
+            100% {
+                transform: translateX(-60vw);
+                visibility: hidden;
+            }
+        }
+
+        &--ativo {
+            animation-name: showPopup;
+            animation-duration: 0.6s;
+            animation-delay: 0.8s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+
+            @keyframes showPopup {
+                0% {
+                    transform: translateX(-60vw);
+                    visibility: hidden;
+                }
+                100% {
+                    transform: translateX(0px);
+                    visibility: visible;
+                }
+            }
+        }
+    }
 }

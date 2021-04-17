@@ -1,5 +1,4 @@
 const products = [];
-const favoriteProducts = getItemStorage("favorite") || [];
 
 function startProductListing(limitItems) {
     getProducts(limitItems)
@@ -25,13 +24,25 @@ function salveProducts(newProducts) {
     products.push(...newProducts);
 }
 
-async function getProducts(limitItems = false) {
-
+async function getProducts(limitItems = false, isFilter = false) {
   let response;
-  
-  limitItems
-    ? (response = await fetch(`http://localhost:3002/products?_limit=${limitItems}`))
-    : (response = await fetch("http://localhost:3002/products"));
+  // id=1&id=2
+
+  if(isFilter) {
+    response = await fetch(`http://localhost:3002/products?${isFilter}`)
+  }
+  else if(limitItems) {
+    response = await fetch(`http://localhost:3002/products?_limit=${limitItems}`);
+  }
+  else {
+    response = await fetch("http://localhost:3002/products");
+  }
+
+  // limitItems
+  //   ? (response = await fetch(
+  //       `http://localhost:3002/products?_limit=${limitItems}`
+  //     ))
+  //   : (response = await fetch("http://localhost:3002/products"));
 
   if (!response.ok) {
     throw new Error("Erro ao buscar os dados: requisição falhou.");
@@ -39,12 +50,4 @@ async function getProducts(limitItems = false) {
 
   const products = await response.json();
   return products;
-}
-
-function setItemStorage(name, item) {
-  localStorage.setItem(name, JSON.stringify(item));
-}
-
-function getItemStorage(name) {
-  return JSON.parse(localStorage.getItem(name));
 }
